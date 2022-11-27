@@ -95,7 +95,7 @@
     </script>
 
     <style>
-        .section-title, .title{
+        .section-title, .title, .hero__title, .play-card__title{
             color: white !important;
         }
     </style>

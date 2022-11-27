@@ -68,7 +68,7 @@
                         data-wow-duration="0.5s"
                         data-wow-delay="0.9s"
                         >
-                        <a href="play-now.html" class="cmn-btn">Play Now</a>
+                        <Link :href="route('playNow')" id="" class="cmn-btn">Play Now</Link>
                         <a
                             class="video-btn"
                             href="https://www.youtube.com/embed/d6xn5uflUjg"
@@ -220,9 +220,11 @@
                                 <div class="contest-card__footer">
                                 <ul class="contest-card__meta">
                                     <li>&nbsp;</li>
-                                    <li>
-                                    <span>PLAY NOW</span>
-                                    </li>
+                                    <Link :href="route('playNow')">
+                                        <li>
+                                        <span>PLAY NOW</span>
+                                        </li>
+                                    </Link>
                                 </ul>
                                 </div>
                             </div>
@@ -242,9 +244,12 @@
                                 <div class="contest-card__footer">
                                 <ul class="contest-card__meta">
                                     <li>&nbsp;</li>
-                                    <li>
-                                    <span>PLAY NOW</span>
-                                    </li>
+                                    <Link :href="route('playNow')">
+                                        <li>
+                                        <span>PLAY NOW</span>
+                                        </li>
+                                    </Link>
+
                                 </ul>
                                 </div>
                             </div>
@@ -264,9 +269,13 @@
                                 <div class="contest-card__footer">
                                 <ul class="contest-card__meta">
                                     <li>&nbsp;</li>
-                                    <li>
-                                    <span>PLAY NOW</span>
-                                    </li>
+
+                                    <Link :href="route('playNow')">
+                                        <li>
+                                        <span>PLAY NOW</span>
+                                        </li>
+                                    </Link>
+
                                 </ul>
                                 </div>
                             </div>
@@ -286,9 +295,12 @@
                                 <div class="contest-card__footer">
                                 <ul class="contest-card__meta">
                                     <li>&nbsp;</li>
-                                    <li>
-                                    <span>PLAY NOW</span>
-                                    </li>
+                                    <Link :href="route('playNow')">
+                                        <li>
+                                        <span>PLAY NOW</span>
+                                        </li>
+                                    </Link>
+
                                 </ul>
                                 </div>
                             </div>
@@ -308,9 +320,13 @@
                                 <div class="contest-card__footer">
                                 <ul class="contest-card__meta">
                                     <li>&nbsp;</li>
-                                    <li>
-                                    <span>PLAY NOW</span>
-                                    </li>
+
+                                    <Link :href="route('playNow')">
+                                        <li>
+                                            <span>PLAY NOW</span>
+                                        </li>
+                                    </Link>
+
                                 </ul>
                                 </div>
                             </div>
@@ -330,9 +346,11 @@
                                 <div class="contest-card__footer">
                                 <ul class="contest-card__meta">
                                     <li>&nbsp;</li>
-                                    <li>
-                                    <span>PLAY NOW</span>
-                                    </li>
+                                    <Link :href="route('playNow')">
+                                        <li>
+                                            <span>PLAY NOW</span>
+                                        </li>
+                                    </Link>
                                 </ul>
                                 </div>
                             </div>
@@ -448,65 +466,57 @@
                                     name="check-number1"
                                     id="check-number1"
                                     placeholder="Enter Ticket No"
+                                    v-model="ticket_id"
                                 />
                                 <div class="number-list-wrapper">
                                     <div class="text-center mt-50">
-                                    <button type="submit" class="cmn-btn">
-                                        check my ticket
-                                    </button>
+                                        <Link
+                                            :href="
+                                                route('ticketStatus', {
+                                                    id: this.ticket_id,
+                                                })
+                                            "
+                                             class="cmn-btn" v-if="this.ticket_id">
+                                            check my ticket
+                                        </Link>
+
+                                        <Link
+                                            @click="emptyTicket()"
+                                             class="cmn-btn" v-else>
+                                            check my ticket
+                                        </Link>
                                     </div>
                                 </div>
                                 </form>
                             </div>
                             </div>
                             <div class="col-lg-8 mb-30">
-                            <div class="winner-card mb-30">
+                            <div class="winner-card mb-30" v-for="(
+                                            ticket, index
+                                        ) in winningTickets"
+                                        :key="index">
                                 <div class="winner-card__content">
                                 <div class="content-bottom">
                                     <div class="number-list-wrapper">
                                     <p>Winning Ticket:</p>
-                                    <span class="cmn-btn mt-2">WG-39050BW0</span>
+                                    <span class="cmn-btn mt-2">{{ ticket.ticket_id }}</span>
                                     <!-- number-list end -->
                                     </div>
                                     <div class="right">
                                     <p>Amount:</p>
-                                    <span class="contest-num">₦10,000</span>
+                                    <span class="contest-num">₦ {{
+                                                                ticket.amount_won
+                                                                    .toString()
+                                                                    .replace(
+                                                                        /\B(?=(\d{3})+(?!\d))/g,
+                                                                        ","
+                                                                    )
+                                                            }}</span>
                                     </div>
                                 </div>
                                 </div>
                             </div>
-                            <!-- winner-card end -->
-                            <div class="winner-card mb-30">
-                                <div class="winner-card__content">
-                                <div class="content-bottom">
-                                    <div class="number-list-wrapper">
-                                    <p>Winning Ticket:</p>
-                                    <span class="cmn-btn mt-2">WG-39050BW0</span>
-                                    <!-- number-list end -->
-                                    </div>
-                                    <div class="right">
-                                    <p>Amount:</p>
-                                    <span class="contest-num">₦10,000</span>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <!-- winner-card end -->
-                            <div class="winner-card mb-30">
-                                <div class="winner-card__content">
-                                <div class="content-bottom">
-                                    <div class="number-list-wrapper">
-                                    <p>Winning Ticket:</p>
-                                    <span class="cmn-btn mt-2">WG-39050BW0</span>
-                                    <!-- number-list end -->
-                                    </div>
-                                    <div class="right">
-                                    <p>Amount:</p>
-                                    <span class="contest-num">₦10,000</span>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+
                             <!-- winner-card end -->
                             <div class="btn-grp">
                                 <a href="winner.html" class="btn-border">browse more</a>
