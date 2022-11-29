@@ -25,17 +25,8 @@
                   </div>
                   <Link :href="route('login')"
                     class="user__btn"
-                     v-if="$page.props.user"
                     ><i class="las la-user"></i
                   ></Link>
-
-                  <a
-                    href="#0"
-                    class="user__btn"
-                    data-toggle="modal"
-                    data-target="#loginModal" v-else
-                    ><i class="las la-user"></i
-                  ></a>
                 </div>
               </div>
             </div>

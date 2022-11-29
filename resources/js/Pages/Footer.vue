@@ -52,10 +52,10 @@
               <ul
                 class="short-links justify-content-lg-end justify-content-center"
               >
-                <li><a href="how-to-win.html">How to Win</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="become-an-agent.html">Become an Agent</a></li>
-                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                <li><Link :href="route('howtowin')">How to Win</Link></li>
+                <li><Link :href="route('faq')">FAQs</Link></li>
+                <li><Link :href="route('becomeAgent')">Become An Agent</Link></li>
+                <li><Link :href="route('termsConditions')">Terms & Conditions</Link></li>
               </ul>
             </div>
           </div>

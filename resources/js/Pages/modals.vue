@@ -92,9 +92,8 @@ const submit = () => {
                 </form>
                 <p class="text-center mt-4">
                     Don’t have an account?
-                    <a href="#0" data-toggle="modal" data-target="#signupModal">
-                    Sign Up Now</a
-                    >
+                    <Link :href="route('register')" >
+                    Sign Up Now</Link>
                 </p>
                 <div class="divider">
                     <span>or</span>
