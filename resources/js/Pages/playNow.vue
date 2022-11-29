@@ -42,62 +42,75 @@
                           <div class="form-row">
                             <div class="form-group col-lg-12">
                               <label>Phone Number *</label>
-                              <input type="text" />
+                              <input type="tel" v-model="phone" placeholder="Enter Phone Number" />
                             </div>
+
+
                             <div class="form-group col-lg-12">
                               <label>Select an Amount to PLAY</label>
                               <p class="mb-0">
-                                <div class="form-check form-check-inline">
-                                  <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="inlineRadioOptions"
-                                    id="inlineRadio1"
-                                    value="option1"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="inlineRadio1"
-                                    >₦100</label
-                                  >
+                                <div
+                                    class="form-check form-check-inline"
+                                >
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="priceRadio"
+                                        id="inlineRadio1"
+                                        value="100"
+                                        v-model="amount"
+                                    />
+                                    <label
+                                        class="form-check-label"
+                                        for="inlineRadio1"
+                                        >₦100</label
+                                    >
                                 </div>
-                                <div class="form-check form-check-inline">
-                                  <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="inlineRadioOptions"
-                                    id="inlineRadio2"
-                                    value="option2"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="inlineRadio2"
-                                    >₦200</label
-                                  >
+                                <div
+                                    class="form-check form-check-inline"
+                                >
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="priceRadio"
+                                        id="inlineRadio2"
+                                        value="200"
+                                        v-model="amount"
+                                    />
+                                    <label
+                                        class="form-check-label"
+                                        for="inlineRadio2"
+                                        >₦200</label
+                                    >
                                 </div>
-                                <div class="form-check form-check-inline">
-                                  <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="inlineRadioOptions"
-                                    id="inlineRadio3"
-                                    value="option3"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="inlineRadio3"
-                                    >₦500</label
-                                  >
+                                <div
+                                    class="form-check form-check-inline"
+                                >
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="priceRadio"
+                                        id="inlineRadio3"
+                                        value="500"
+                                        v-model="amount"
+                                    />
+                                    <label
+                                        class="form-check-label"
+                                        for="inlineRadio3"
+                                        >₦500</label
+                                    >
                                 </div>
+
                               </p>
                             </div>
+
                             <div class="form-group col-lg-6">
                               <label>Play Amount *</label>
-                              <input type="text" placeholder="2000" />
+                              <input type="text" placeholder="₦5,000" v-model="playAmount" />
                             </div>
                             <div class="form-group col-lg-6">
                               <label>Referral Code (Optional)</label>
-                              <input type="text" placeholder="Enter Referral Code" />
+                              <input type="text" placeholder="Enter Referral Code" v-model="refCode"/>
                             </div>
                           </div>
                         </form>
@@ -117,7 +130,7 @@
                                 <h5 class="caption">Phone Number</h5>
                               </div>
                               <div class="right">
-                                <span class="price">08023456789</span>
+                                <span class="price">{{this.phone}}</span>
                               </div>
                             </li>
                             <li>
@@ -125,7 +138,7 @@
                                 <h5 class="caption">Ticket Amount</h5>
                               </div>
                               <div class="right">
-                                <span class="price">₦500</span>
+                                <span class="price">{{this.amount}}</span>
                               </div>
                             </li>
                             <li>
@@ -133,7 +146,7 @@
                                 <h5 class="caption">Play Amount</h5>
                               </div>
                               <div class="right">
-                                <span class="price">₦2000</span>
+                                <span class="price">{{this.playAmount}}</span>
                               </div>
                             </li>
                             <li>
@@ -141,18 +154,98 @@
                                 <h4 class="caption">No. of Ticket(s)</h4>
                               </div>
                               <div class="right">
-                                <span class="price">4</span>
+                                <span class="price">{{Math.floor(this.playAmount /this.amount)}}</span>
                               </div>
                             </li>
                           </ul>
-                          <div class="checkout-wrapper__btn">
-                            <button type="submit" class="cmn-btn">Place Order</button>
-                          </div>
+
+                            <div class="ps-checkout__payment">
+                                <div class="paypal-method">
+                                    <h3>
+                                        <div
+                                            class="form-check form-check-inline"
+                                        >
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="inlineRadioOptions"
+                                                id="inlineRadio7"
+                                                v-model="paymentMethod"
+                                                value="paystack"
+                                                checked
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="inlineRadio7"
+                                                ><img
+                                                    class="img-fluid"
+                                                    src="/assets/img/paystack.png"
+                                            /></label>
+                                        </div>
+                                        <div
+                                            class="form-check form-check-inline"
+                                            v-if="this.flutterSet"
+                                        >
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="inlineRadioOptions"
+                                                id="inlineRadio8"
+                                                v-model="paymentMethod"
+                                                value="flutterwave"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="inlineRadio8"
+                                                ><img
+                                                    class="img-fluid"
+                                                    src="/assets/img/flutterwave.png"
+                                            /></label>
+                                        </div>
+                                    </h3>
+                                </div>
+                                <div class="check-faq">
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="agree-faq"
+                                        />
+                                        <label
+                                            class="form-check-label"
+                                            for="agree-faq"
+                                        >
+                                            I have read and agree to the
+                                            website terms and conditions
+                                            *</label
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="checkout-wrapper__btn mt-minus-20">
+                                    <button
+                                        v-if="
+                                            this.paymentMethod !=
+                                            'flutterwave'
+                                        "
+                                        class="cmn-btn"
+                                        @click="payWithPaystack()"
+                                    >
+                                        Place order
+                                    </button>
+
+                                    <button
+                                        v-if="this.flutterSet"
+                                        class="cmn-btn"
+                                        @click="payWithRave()"
+                                    >
+                                        Place order
+                                    </button>
+                                </div>
+
+                            </div>
                         </div>
                       </div><!-- checkout-wrapper end -->
-                      <div class="mt-30">
-                        <img src="images/elements/payment.png" alt="image">
-                      </div>
                   </div>
                 </div>
               </div>
@@ -685,6 +778,10 @@ export default {
 
 #payment-failed {
     display: none;
+}
+
+.caption{
+    color:white !important;
 }
 @media screen and (max-width: 992px) {
     .mobile {

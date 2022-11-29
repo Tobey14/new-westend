@@ -13,25 +13,25 @@
     <!-- site favicon -->
     <link rel="icon" type="image/png" href="img/favicon.ico" sizes="16x16" />
     <!-- bootstrap 4  -->
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/vendor/bootstrap.min.css" />
     <!-- fontawesome 5  -->
-    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/all.min.css" />
     <!-- line-awesome webfont -->
-    <link rel="stylesheet" href="css/line-awesome.min.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/line-awesome.min.css" />
     <!-- custom select css -->
-    <link rel="stylesheet" href="css/vendor/nice-select.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/vendor/nice-select.css" />
     <!-- animate css  -->
-    <link rel="stylesheet" href="css/vendor/animate.min.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/vendor/animate.min.css" />
     <!-- lightcase css -->
-    <link rel="stylesheet" href="css/vendor/lightcase.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/vendor/lightcase.css" />
     <!-- slick slider css -->
-    <link rel="stylesheet" href="css/vendor/slick.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/vendor/slick.css" />
     <!-- jquery ui css -->
-    <link rel="stylesheet" href="css/vendor/jquery-ui.min.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/vendor/jquery-ui.min.css" />
     <!-- datepicker css -->
-    <link rel="stylesheet" href="css/vendor/datepicker.min.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/vendor/datepicker.min.css" />
     <!-- style main css -->
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="{{url('/')}}/css/main.css" />
 
 
     <title inertia>WestEnd Gaming Limited</title>
@@ -218,32 +218,32 @@
 
     <!-- page-wrapper end -->
     <!-- jQuery library -->
-    <script src="js/vendor/jquery-3.5.1.min.js"></script>
+    <script src="{{url('/')}}/js/vendor/jquery-3.5.1.min.js"></script>
     <!-- bootstrap js -->
-    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="{{url('/')}}/js/vendor/bootstrap.bundle.min.js"></script>
     <!-- custom select js -->
-    <script src="js/vendor/jquery.nice-select.min.js"></script>
+    <script src="{{url('/')}}/js/vendor/jquery.nice-select.min.js"></script>
     <!-- lightcase js -->
-    <script src="js/vendor/lightcase.js"></script>
+    <script src="{{url('/')}}/js/vendor/lightcase.js"></script>
     <!-- wow js -->
-    <script src="js/vendor/wow.min.js"></script>
+    <script src="{{url('/')}}/js/vendor/wow.min.js"></script>
     <!-- slick slider js -->
-    <script src="js/vendor/slick.min.js"></script>
+    <script src="{{url('/')}}/js/vendor/slick.min.js"></script>
     <!-- countdown js -->
-    <script src="js/vendor/jquery.countdown.js"></script>
+    <script src="{{url('/')}}/js/vendor/jquery.countdown.js"></script>
     <!-- jquery ui js -->
-    <script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="{{url('/')}}/js/vendor/jquery-ui.min.js"></script>
     <!-- datepicker js -->
-    <script src="js/vendor/datepicker.min.js"></script>
-    <script src="js/vendor/datepicker.en.js"></script>
+    <script src="{{url('/')}}/js/vendor/datepicker.min.js"></script>
+    <script src="{{url('/')}}/js/vendor/datepicker.en.js"></script>
     <!-- preloader -->
-    <script src="js/vendor/TweenMax.min.js"></script>
-    <script src="js/vendor/MorphSVGPlugin.min.js"></script>
-    <script src="js/preloader.js"></script>
+    <script src="{{url('/')}}/js/vendor/TweenMax.min.js"></script>
+    <script src="{{url('/')}}/js/vendor/MorphSVGPlugin.min.js"></script>
+    <script src="{{url('/')}}/js/preloader.js"></script>
     <!-- contact js -->
-    <script src="js/contact.js"></script>
+    <script src="{{url('/')}}/js/contact.js"></script>
     <!-- custom js -->
-    <script src="js/mine.js"></script>
+    <script src="{{url('/')}}/js/mine.js"></script>
 
 
 

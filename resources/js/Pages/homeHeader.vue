@@ -46,7 +46,7 @@
           <div class="container">
             <nav class="navbar navbar-expand-xl p-0 align-items-center">
                 <Link :href="route('home')" class="site-logo site-title">
-                    <img src="img/logo-sm.png" alt="site-logo" /><span
+                    <img src="/img/logo-sm.png" alt="site-logo" /><span
                     class="logo-icon"
                     ><i class="flaticon-fire"></i></span
               ></Link>
@@ -79,7 +79,7 @@
                 <div class="nav-right">
                     <Link :href="route('playNow')" class="cmn-btn style--three btn--sm"
                     ><img
-                      src="images/icon/btn/tag.png"
+                      src="/images/icon/btn/tag.png"
                       alt="icon"
                       class="mr-2"
                     />
@@ -108,7 +108,7 @@
             <div class="container">
                 <div class="ps-logo">
                     <Link :href="route('home')">
-                        <img src="../../../public/assets/img/logo.png" alt />
+                        <img src="../../../public/assets/{{url('/')}}/logo.png" alt />
 
                         <img
                             class="sticky-logo"

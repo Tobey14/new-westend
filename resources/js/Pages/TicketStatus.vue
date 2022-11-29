@@ -1,5 +1,156 @@
 <template>
-    <div>
+    <div class="page-wrapper" style="background-color: #0f0232;color:white !important">
+            <Modal />
+            <Header />
+
+
+
+            <!-- latest winner section start  -->
+            <section class="latest-winner-section position-relative pt-200 pb-120" style="padding-top:200px">
+                <div class="el-1">
+                <img src="/images/elements/w-el-1.png" alt="image" />
+                </div>
+                <div class="el-2">
+                <img src="/images/elements/w-el-2.png" alt="image" />
+                </div>
+                <div class="el-3">
+                <img src="/images/elements/w-el-3.png" alt="image" />
+                </div>
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div
+                    class="col-lg-8 wow fadeInUp"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="0.3s"
+                    >
+                    <div class="section-header text-center">
+
+                        <h2 class="section-title">Ticket Status</h2>
+                        <p>
+                        Keep Playing to increase your chances.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <!-- row end -->
+
+                <div
+                    class="row wow fadeInUp"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="0.5s"
+                >
+                    <div class="col-lg-12">
+                    <ul
+                        class="nav nav-tabs winner-tab-nav"
+                        id="winnerTab"
+                        role="tablist"
+                    ></ul>
+                    <div class="tab-content mt-50" id="winnerTabContent">
+                        <div
+                        class="tab-pane fade show active"
+                        id="dream"
+                        role="tabpanel"
+                        aria-labelledby="dream-tab"
+                        >
+                        <div class="d-flex justify-content-center mb-none-30">
+                            <div class="col-lg-4 mb-30">
+                            <div class="number-check-wrapper">
+                                <h3 class="title text-center">Ticket Status</h3>
+
+                                <div class="ps-product__feature text-white">
+                                        <div
+                                            class="ps-product__meta text-center"
+                                            v-if="ticket"
+                                        >
+                                            <span
+                                                class="ps-product__price sale text-white"
+                                                v-if="ticket.status == 'won'"
+                                                >Congratulations!!!</span
+                                            >
+                                            <span
+                                                class="ps-product__price sale text-white"
+                                                v-else
+                                                >Bump!!!</span
+                                            >
+                                        </div>
+
+                                        <div
+                                            class="ps-product__meta text-center"
+                                            v-else
+                                        >
+                                            <span class="ps-product__price sale text-white"
+                                                >We are Sorry</span
+                                            >
+                                        </div>
+                                        <div class="ps-product__variable">
+                                            <div
+                                                class="ps-product__attribute text-center mb-5 text-white"
+                                                v-if="ticket"
+                                            >
+                                                <h6
+                                                    v-if="
+                                                        ticket.status == 'won'
+                                                    "
+                                                >
+                                                    Your ticket
+                                                    {{ searchItem }} won daily
+                                                    draw. Our representative
+                                                    will contact you through
+                                                    your phone number
+                                                </h6>
+
+                                                <h6 v-else class="text-white">
+                                                    Your ticket
+                                                    {{ searchItem }} is still
+                                                    active for the monthly draw,
+                                                    but did not win for today's
+                                                    draw.
+                                                    <br />
+                                                    <br />
+                                                    <span class="status-small text-white">
+                                                        Play for tomorrow's draw
+                                                    </span>
+                                                </h6>
+                                            </div>
+
+                                            <div
+                                                class="ps-product__attribute text-center mb-5 text-white"
+                                                v-else
+                                            >
+                                                <h6 class="text-white">
+                                                    Ticket {{ searchItem }} not
+                                                    Found. Confirm the ticket ID
+                                                    and try again.
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <Link
+                                            :href="route('playNow')"
+                                            class="cmn-btn text-capitalize mt-4"
+                                        >
+                                            Play More
+                                        </Link>
+                                    </div>
+                            </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+                    <!-- tab-content end -->
+                    </div>
+                </div>
+                <!-- row end -->
+                </div>
+            </section>
+            <!-- latest winner section end  -->
+
+
+
+
+            <Footer />
+        </div>
+    <!-- <div>
         <div class="ps-page">
             <Header />
 
@@ -155,7 +306,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>

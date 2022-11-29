@@ -41,7 +41,7 @@
                   <h2 class="section-title font-weight-bold">
                     Become an Agent
                   </h2>
-                  <a href="" class="cmn-btn text-capitalize mt-4">Sign Up</a>
+                  <Link :href="route('register')" class="cmn-btn text-capitalize mt-4">Sign Up</Link>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@
               <li>Anyone can be a Westend agent, you must be 18+ to join.</li>
             </ul>
             <p>&nbsp;</p>
-            <a href="" class="cmn-btn text-capitalize mt-4">Sign Up Now</a>
+            <Link :href="route('register')" class="cmn-btn text-capitalize mt-4">Sign Up Now</Link>
             <p>&nbsp;</p>
           </div>
         </div>

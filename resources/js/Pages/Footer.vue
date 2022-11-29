@@ -3,7 +3,7 @@
     <!-- footer section start  -->
     <footer class="footer-section">
         <div class="bg-shape--top">
-          <img src="images/elements/round-shape-2.png" alt="image" />
+          <img src="/images/elements/round-shape-2.png" alt="image" />
         </div>
         <div class="container">
           <div class="row">
@@ -38,12 +38,12 @@
               <ul class="app-btn">
                 <li>
                   <a href="#0"
-                    ><img src="images/icon/store-btn/1.png" alt="image"
+                    ><img src="/images/icon/store-btn/1.png" alt="image"
                   /></a>
                 </li>
                 <li>
                   <a href="#0"
-                    ><img src="images/icon/store-btn/2.png" alt="image"
+                    ><img src="/images/icon/store-btn/2.png" alt="image"
                   /></a>
                 </li>
               </ul>
