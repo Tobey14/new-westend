@@ -95,7 +95,7 @@
     </script>
 
     <style>
-        .section-title, .title, .hero__title, .play-card__title, .feature-title, .support-card__title, .client-name{
+        .section-title, .title, .hero__title, .play-card__title, .feature-title, .support-card__title, .client-name, .contest-num .number{
             color: white !important;
         }
 

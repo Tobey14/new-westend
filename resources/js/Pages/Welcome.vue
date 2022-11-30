@@ -212,8 +212,8 @@
                                 <div class="contest-card__thumb">
                                 <img src="img/products/03.jpg" alt="image" />
                                 <div class="contest-num">
-                                    <span>Daily</span>
-                                    <h4 class="number">Prizes</h4>
+                                    <span>Daily </span>
+                                    <h4 class="number"> Prizes</h4>
                                 </div>
                                 </div>
                                 <div class="contest-card__content"></div>
@@ -373,7 +373,7 @@
             <!-- contest section end -->
 
             <!-- winner section start -->
-            <section class="position-relative pt-120 pb-120">
+            <section class="position-relative">
                 <div class="">
                 <img src="/img/promotion/shape3.png" alt="image" />
                 </div>
@@ -402,7 +402,7 @@
             <!-- winner section end -->
 
             <!-- latest winner section start  -->
-            <section class="latest-winner-section position-relative pt-120 pb-120">
+            <section class="latest-winner-section position-relative pb-120" style="margin-top:-100px !important">
                 <div class="el-1">
                 <img src="images/elements/w-el-1.png" alt="image" />
                 </div>

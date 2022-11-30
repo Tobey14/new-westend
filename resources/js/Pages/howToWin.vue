@@ -32,8 +32,8 @@
           <div class="row">
             <div class="col-lg-12">
               <div
-                class="video-wrapper bg_img"
-                data-background="img/promotion/shape2.png"
+                class="video-wrapper"
+                style="background: url('/img/promotion/shape2.png')"
               >
                 <a
                   class="cmn-btn text-capitalize"
@@ -80,8 +80,8 @@
                 class="play-card bg_img"
                 data-background="images/elements/card-bg-1.jpg"
               >
-                <div class="play-card__icon">
-                  <img src="images/icon/play/1.png" alt="image-icon" />
+                <div class="play-card__icon d-flex">
+                  <img src="images/icon/play/1.png" class="m-auto" alt="image-icon" />
                   <span class="play-card__number">01</span>
                 </div>
                 <div class="play-card__content">
@@ -96,8 +96,8 @@
                 class="play-card bg_img"
                 data-background="images/elements/card-bg-2.jpg"
               >
-                <div class="play-card__icon">
-                  <img src="images/icon/play/2.png" alt="image-icon" />
+                <div class="play-card__icon d-flex">
+                  <img src="images/icon/play/2.png" class="m-auto" alt="image-icon" />
                   <span class="play-card__number">02</span>
                 </div>
                 <div class="play-card__content">
@@ -112,8 +112,8 @@
                 class="play-card bg_img"
                 data-background="images/elements/card-bg-3.jpg"
               >
-                <div class="play-card__icon">
-                  <img src="images/icon/play/3.png" alt="image-icon" />
+                <div class="play-card__icon d-flex">
+                  <img src="images/icon/play/3.png" class="m-auto" alt="image-icon" />
                   <span class="play-card__number">03</span>
                 </div>
                 <div class="play-card__content">
