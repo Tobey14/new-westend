@@ -656,8 +656,8 @@
                             data-wow-delay="0.3s"
                             >
                             <div class="feature-card hover--effect-1">
-                                <div class="feature-card__icon">
-                                <img src="images/icon/feature/1.png" alt="image" />
+                                <div class="feature-card__icon d-flex">
+                                <img src="images/icon/feature/1.png" class="m-auto" alt="image" />
                                 </div>
                                 <div class="feature-card__content">
                                 <h3 class="feature-title">Safe Service</h3>
@@ -676,8 +676,8 @@
                             data-wow-delay="0.5s"
                             >
                             <div class="feature-card hover--effect-1">
-                                <div class="feature-card__icon">
-                                <img src="images/icon/feature/3.png" alt="image" />
+                                <div class="feature-card__icon d-flex">
+                                <img src="images/icon/feature/3.png" class="m-auto" alt="image" />
                                 </div>
                                 <div class="feature-card__content">
                                 <h3 class="feature-title">Network</h3>
@@ -700,8 +700,8 @@
                             data-wow-delay="0.3s"
                             >
                             <div class="feature-card hover--effect-1">
-                                <div class="feature-card__icon">
-                                <img src="images/icon/feature/2.png" alt="image" />
+                                <div class="feature-card__icon d-flex">
+                                <img src="images/icon/feature/2.png" class="m-auto" alt="image" />
                                 </div>
                                 <div class="feature-card__content">
                                 <h3 class="feature-title">Security</h3>
@@ -720,8 +720,8 @@
                             data-wow-delay="0.5s"
                             >
                             <div class="feature-card hover--effect-1">
-                                <div class="feature-card__icon">
-                                <img src="images/icon/feature/4.png" alt="image" />
+                                <div class="feature-card__icon d-flex">
+                                <img src="images/icon/feature/4.png" class="m-auto" alt="image" />
                                 </div>
                                 <div class="feature-card__content">
                                 <h3 class="feature-title">Support</h3>
@@ -766,7 +766,7 @@
             <!-- features section end -->
 
             <!-- testimonial section start -->
-            <section class="has-bg--shape pt-120 pb-120">
+            <section class="has-bg--shape pt-120 pb-120 tbg mb-100">
                 <div class="bg-shape">
                 <div class="round-shape d-sm-block d-none">
                     <img src="images/elements/round-shape.png" alt="image" />
@@ -893,8 +893,8 @@
                         <h3 class="support-card__title">Our Guide to Westend</h3>
                         <p>Check out our FAQs to see if we can help you out.</p>
                         <div class="btn-grp justify-content-xl-start mt-3">
-                            <a href="faq.html" class="btn-border btn-sm text-capitalize"
-                            >FAQs & Help</a
+                            <Link :href="route('faq')" class="btn-border btn-sm text-capitalize"
+                            >FAQs & Help</Link
                             >
                         </div>
                         </div>

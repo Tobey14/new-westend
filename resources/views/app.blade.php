@@ -95,8 +95,17 @@
     </script>
 
     <style>
-        .section-title, .title, .hero__title, .play-card__title{
+        .section-title, .title, .hero__title, .play-card__title, .feature-title, .support-card__title, .client-name{
             color: white !important;
+        }
+
+        .tbg{
+            background-image: -webkit-linear-gradient(90deg, #e82a7a 0%, #360354 100%);
+        }
+
+        .container{
+            padding-left: 50px !important;
+            padding-right: 50px !important;
         }
     </style>
 </head>
